@@ -2,7 +2,7 @@
 <export version="E">
   <design>
     <source>/home/pstiverson/Projects/AR-808/hardware/lfo/lfo.kicad_sch</source>
-    <date>Sat 10 Feb 2024 08:06:14 AM CST</date>
+    <date>Thu 25 Apr 2024 09:40:35 AM CDT</date>
     <tool>Eeschema 7.0.9-7.0.9~ubuntu22.04.1</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -114,7 +114,7 @@
     </comp>
     <comp ref="C9">
       <value>120p</value>
-      <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
+      <footprint>Capacitor_SMD:C_0603_1608Metric_Pad1.08x0.95mm_HandSolder</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="lfo.kicad_sch"/>
@@ -124,7 +124,7 @@
       <tstamps>eba3c14f-ae9e-43bc-9a01-89304c0fb657</tstamps>
     </comp>
     <comp ref="C10">
-      <value>120p</value>
+      <value>1n</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value=""/>
@@ -731,7 +731,7 @@
       <tstamps>6401a78a-692f-4ccd-8f85-bb28859996b1</tstamps>
     </comp>
     <comp ref="R27">
-      <value>150K</value>
+      <value>22K</value>
       <footprint>Resistor_SMD:R_0805_2012Metric</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
@@ -1030,7 +1030,7 @@
       <property name="ki_description" value="Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"/>
       <property name="ki_keywords" value="quad opamp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>79e6a162-ba9f-4c85-9062-220697f401c0 e7663b97-2cc5-4c93-9a8d-ce0c9392dda9 3011c011-ed23-4e4c-ace4-1407de4eba72 5d4af272-3422-40cb-ba17-3ff1aa477cf7 0ba23802-0599-49f3-9aea-5937ab0ac293</tstamps>
+      <tstamps>e7663b97-2cc5-4c93-9a8d-ce0c9392dda9 5d4af272-3422-40cb-ba17-3ff1aa477cf7 3011c011-ed23-4e4c-ace4-1407de4eba72 79e6a162-ba9f-4c85-9062-220697f401c0 0ba23802-0599-49f3-9aea-5937ab0ac293</tstamps>
     </comp>
     <comp ref="U3">
       <value>TL074</value>
@@ -1048,7 +1048,7 @@
       <property name="ki_description" value="Quad Low-Noise JFET-Input Operational Amplifiers, DIP-14/SOIC-14"/>
       <property name="ki_keywords" value="quad opamp"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>b47dc256-a0d4-4f84-b5ab-46d56f36973d 6629a70f-0524-4f7b-b851-6d945c6e985e 90922028-fd60-4918-b43f-98a4911fe0fc 170e3d27-687a-4e0a-b841-bca901af9e76 1124fd3f-6818-462c-a8f6-a2e68426b6f6</tstamps>
+      <tstamps>b47dc256-a0d4-4f84-b5ab-46d56f36973d 90922028-fd60-4918-b43f-98a4911fe0fc 6629a70f-0524-4f7b-b851-6d945c6e985e 170e3d27-687a-4e0a-b841-bca901af9e76 1124fd3f-6818-462c-a8f6-a2e68426b6f6</tstamps>
     </comp>
   </components>
   <libparts>
@@ -1533,7 +1533,7 @@
       <node ref="U2" pin="10" pinfunction="+" pintype="input"/>
       <node ref="U2" pin="5" pinfunction="+" pintype="input"/>
       <node ref="U3" pin="12" pinfunction="+" pintype="input"/>
-      <node ref="U3" pin="5" pinfunction="+" pintype="input"/>
+      <node ref="U3" pin="3" pinfunction="+" pintype="input"/>
     </net>
     <net code="14" name="Net-(C3-Pad2)">
       <node ref="C3" pin="2" pintype="passive"/>
@@ -1545,7 +1545,8 @@
       <node ref="R18" pin="1" pintype="passive"/>
       <node ref="R19" pin="1" pintype="passive"/>
       <node ref="R20" pin="1" pintype="passive"/>
-      <node ref="U3" pin="7" pintype="output"/>
+      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="U3" pin="1" pintype="output"/>
     </net>
     <net code="16" name="Net-(C10-Pad2)">
       <node ref="C10" pin="2" pintype="passive"/>
@@ -1611,7 +1612,7 @@
       <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
       <node ref="U1" pin="6" pinfunction="THR" pintype="input"/>
       <node ref="U1" pin="7" pinfunction="DIS" pintype="input"/>
-      <node ref="U3" pin="3" pinfunction="+" pintype="input"/>
+      <node ref="U3" pin="5" pinfunction="+" pintype="input"/>
     </net>
     <net code="28" name="Net-(Q2-G)">
       <node ref="Q2" pin="2" pinfunction="G" pintype="input"/>
@@ -1729,17 +1730,16 @@
       <node ref="U2" pin="13" pinfunction="-" pintype="input"/>
     </net>
     <net code="53" name="Net-(U3A--)">
-      <node ref="R14" pin="1" pintype="passive"/>
-      <node ref="U3" pin="1" pintype="output"/>
-      <node ref="U3" pin="2" pinfunction="-" pintype="input"/>
-    </net>
-    <net code="54" name="Net-(U3B--)">
       <node ref="C9" pin="1" pintype="passive"/>
       <node ref="R14" pin="2" pintype="passive"/>
       <node ref="R15" pin="1" pintype="passive"/>
       <node ref="R17" pin="1" pintype="passive"/>
-      <node ref="R31" pin="1" pintype="passive"/>
+      <node ref="U3" pin="2" pinfunction="-" pintype="input"/>
+    </net>
+    <net code="54" name="Net-(U3B--)">
+      <node ref="R14" pin="1" pintype="passive"/>
       <node ref="U3" pin="6" pinfunction="-" pintype="input"/>
+      <node ref="U3" pin="7" pintype="output"/>
     </net>
     <net code="55" name="Net-(U3C--)">
       <node ref="R18" pin="2" pintype="passive"/>

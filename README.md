@@ -52,4 +52,12 @@ There are part numbers in the [BOM](lfo.csv) for many of the parts (not for basi
 * [Mouser](https://www.mouser.com): Needs no introduction. Get your ICs from here (or [digikey](https://www.digikey.com)).
 * [Tayda Electronics](https://www.taydaelectronics.com/): Good supplier for passive components; audio jacks, and potentiometers. Their audio jacks are slightly smaller than the thonkiconn from thonk.
 * [Love My Switches](https://lovemyswitches.com/): Has [really good knobs](https://lovemyswitches.com/anodized-aluminum-knob-the-lo-fi-1-4-smooth-shaft-12-5mm-od/) to go on those potentiometers!
-* [OSHPark](https://oshpark.com/): Fast and (relatively) cheap PCB manufacturer. I haven't done a prototype run yet... stay tuned.
+* [OSHPark](https://oshpark.com/): Fast and (relatively) cheap PCB manufacturer. The [V0 circuit](https://oshpark.com/shared_projects/wfHu28zj) works well but has several bugs which are listed below.
+
+# Bugs
+
+## V0
+* CV knob is backwards
+* PWM knob is backwards
+* Rate knob is backwards
+* Kinda hard to dial in
